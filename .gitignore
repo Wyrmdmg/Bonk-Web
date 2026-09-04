@@ -1,0 +1,38 @@
+# Dependencies
+node_modules
+
+# Build output
+dist
+dist-ssr
+.output
+.nitro
+.vinxi
+.tanstack/**
+.wrangler/
+.vercel/
+.netlify/
+
+# Environment
+.env
+.env.*
+!.env.example
+.dev.vars
+
+# Generated: TanStack Router writes this on dev and on build
+src/routeTree.gen.ts
+
+# Logs
+*.log
+logs
+
+# Editor and OS
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.code-workspace
+*.sw?
+
+# Supabase CLI local state
+supabase/.temp/
+supabase/.branches/

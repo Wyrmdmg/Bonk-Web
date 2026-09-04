@@ -1,0 +1,1 @@
+ALTER TABLE public.bonks ADD COLUMN IF NOT EXISTS cycle_paused_at timestamptz;

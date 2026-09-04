@@ -1,0 +1,1 @@
+ALTER TABLE public.bonks ADD COLUMN IF NOT EXISTS coffee_cram_vc BOOLEAN NOT NULL DEFAULT false;

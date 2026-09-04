@@ -1,0 +1,183 @@
+<!doctype html>
+<!-- Source for public/og.png, the link preview card. Not served: it lives here
+     so the image can be remade rather than being a binary nobody can edit.
+     To regenerate, serve this file and screenshot it at exactly 1200x630. -->
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Silkscreen:wght@400;700&display=swap"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        width: 1200px;
+        height: 630px;
+        overflow: hidden;
+        background-color: #4a7d95;
+        background-image:
+          repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.06) 0 2px, transparent 2px 4px),
+          linear-gradient(180deg, #6d9fb4 0 34%, #4a7d95 34% 70%, #2f5c74 70% 100%);
+      }
+      .film {
+        position: fixed;
+        inset: 0;
+        z-index: 9;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23g)'/%3E%3C/svg%3E");
+        background-size: 140px 140px;
+        opacity: 0.4;
+        mix-blend-mode: overlay;
+      }
+      .scan {
+        position: fixed;
+        inset: 0;
+        z-index: 8;
+        background: repeating-linear-gradient(
+          0deg,
+          rgba(0, 0, 0, 0.045) 0 1px,
+          transparent 1px 3px
+        );
+      }
+      .win {
+        position: absolute;
+        left: 96px;
+        top: 96px;
+        width: 1008px;
+        border: 3px solid #141410;
+        background: #ece9d8;
+        box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.35);
+      }
+      .cap {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 9px 10px;
+        background-color: #1e4f96;
+        background-image: linear-gradient(180deg, #3a78ba 0 22%, #1e4f96 22% 78%, #16345c 78% 100%);
+        color: #fff;
+        font:
+          700 17px/1 "JetBrains Mono",
+          monospace;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.45);
+      }
+      .cap .dot {
+        width: 15px;
+        height: 15px;
+        background: #ece9d8;
+        border: 2px solid #141410;
+      }
+      .cap .btns {
+        margin-left: auto;
+        display: flex;
+        gap: 5px;
+      }
+      .cap .btns i {
+        display: block;
+        width: 22px;
+        height: 19px;
+        border: 2px solid #141410;
+        background: #d9d4c0;
+      }
+      .cap .btns i:last-child {
+        background: #c9452a;
+      }
+      .body {
+        padding: 44px 52px 50px;
+      }
+      h1 {
+        font:
+          700 104px/0.92 "Silkscreen",
+          "JetBrains Mono",
+          monospace;
+        color: #141410;
+        letter-spacing: 0.04em;
+      }
+      .sub {
+        margin-top: 20px;
+        font:
+          500 27px/1.35 "JetBrains Mono",
+          monospace;
+        color: #141410;
+      }
+      .row {
+        margin-top: 34px;
+        display: flex;
+        gap: 14px;
+      }
+      .chip {
+        padding: 13px 22px;
+        border: 3px solid #141410;
+        background: #d9d4c0;
+        box-shadow: 5px 5px 0 #141410;
+        font:
+          700 20px/1 "JetBrains Mono",
+          monospace;
+        letter-spacing: 0.09em;
+        text-transform: uppercase;
+        color: #141410;
+      }
+      .chip.on {
+        background: #d9702f;
+      }
+      .bar {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 56px;
+        z-index: 10;
+        display: flex;
+        align-items: center;
+        padding: 0 18px;
+        gap: 14px;
+        background-color: #1e4f96;
+        background-image: linear-gradient(180deg, #3a78ba 0 24%, #1e4f96 24% 100%);
+        border-top: 3px solid #141410;
+        font:
+          700 18px/1 "JetBrains Mono",
+          monospace;
+        color: #fff;
+        letter-spacing: 0.1em;
+      }
+      .start {
+        padding: 9px 22px;
+        background: #3f8f4f;
+        border: 2px solid #141410;
+        text-transform: uppercase;
+      }
+      .clock {
+        margin-left: auto;
+        opacity: 0.9;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="win">
+      <div class="cap">
+        <span class="dot"></span>BONK<span class="btns"><i></i><i></i><i></i></span>
+      </div>
+      <div class="body">
+        <h1>BONK</h1>
+        <p class="sub">
+          A shared focus timer. Start one on your own,<br />or open a room your friends can join.
+        </p>
+        <div class="row">
+          <span class="chip on">Join a live bonk</span>
+          <span class="chip">Focus alone</span>
+        </div>
+      </div>
+    </div>
+    <div class="scan"></div>
+    <div class="film"></div>
+    <div class="bar">
+      <span class="start">Start</span><span>BONK.EXE</span><span class="clock">your-domain.example</span>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,16 @@
+# Bonk
+
+> Bonk is a shared focus timer for deep work. Run pomodoro or interval cycles solo, or host live rooms where friends sync on the same timer, earn XP and coins, and stock a pixel-art pantry.
+
+## Pages
+
+- [Home](/): Overview of Bonk, the shared focus timer.
+- [Solo focus](/solo): Personal pomodoro / interval / stopwatch timer, no account required.
+- [Live bonks](/bonks): Browse and join live shared focus rooms, or host your own.
+- [Leaderboard](/leaderboard): Top focusers ranked by XP, current streak, and longest streak.
+- [Shop](/shop): Spend focus-earned coins on pantry snacks and time-limited badges.
+- [Sign in](/auth): Username-only sign in with recovery codes.
+
+## Optional
+
+- [Settings](/settings): Account, profile, and preferences (requires sign in).
